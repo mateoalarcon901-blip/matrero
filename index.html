@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matrero · Indumentaria de trabajo</title>
+  <meta name="description" content="Matrero: indumentaria de trabajo resistente, cómoda y hecha para durar. Consultá por WhatsApp." />
+  <meta property="og:title" content="Matrero · Indumentaria de trabajo" />
+  <meta property="og:image" content="/hero-poster.jpg" />
+  <meta name="theme-color" content="#0d0b09" />
+  <link rel="preload" as="image" href="/hero-campo.jpg" media="(min-width: 901px)" />
+  <link rel="preload" as="image" href="/hero-poster.jpg" media="(max-width: 900px)" />
+  <link rel="icon" href="/logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuPanel">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="brand" href="#inicio"><img src="/logo.jpg" alt="" /><span>Matrero</span></a>
+      <div class="menu-panel" id="menuPanel" hidden>
+        <a href="#catalogo" class="menu-item" data-close><span class="ico" data-icon="cat"></span>Catálogo</a>
+        <a class="menu-item" id="menuWa" target="_blank" rel="noopener" data-close><span class="ico" data-icon="wa"></span>WhatsApp</a>
+        <a class="menu-item" id="menuIg" target="_blank" rel="noopener" data-close><span class="ico" data-icon="ig"></span>Instagram</a>
+      </div>
+    </div>
+    <nav>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="topbar-actions">
+      <a class="btn btn-sm btn-social" id="topIg" target="_blank" rel="noopener" aria-label="Instagram"><span class="ico" data-icon="ig"></span><span class="hide-xs">Instagram</span></a>
+      <a class="btn btn-sm btn-social" id="topWa" target="_blank" rel="noopener" aria-label="WhatsApp"><span class="ico" data-icon="wa"></span><span class="hide-xs">WhatsApp</span></a>
+      <button class="btn btn-sm btn-cart" id="cartBtn" aria-label="Ver carrito" aria-haspopup="dialog"><span class="ico" data-icon="bag"></span><span class="hide-xs">Carrito</span><b class="cart-count" id="cartCount" hidden>0</b></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <picture class="hero-photo">
+        <source media="(max-width: 900px)" srcset="/hero-poster.jpg" width="1024" height="1536" />
+        <img src="/hero-campo.jpg" width="1024" height="856" alt="Camisa, bombacha, boina y botas Matrero sobre un alambrado de campo al atardecer" fetchpriority="high" />
+      </picture>
+      <div class="hero-sun" aria-hidden="true"></div>
+      <canvas class="hero-dust" id="dust" aria-hidden="true"></canvas>
+      <svg class="hero-wind" viewBox="0 0 1500 800" preserveAspectRatio="none" aria-hidden="true"><path class="gust" style="--d:0s;--t:9s" d="M-200 210 C200 190 500 230 820 205 S1300 180 1700 200" /><path class="gust" style="--d:3s;--t:11s" d="M-200 520 C250 500 600 540 900 515 S1350 495 1700 520" /><path class="gust" style="--d:6s;--t:12s" d="M-200 360 C300 345 640 380 980 356 S1400 340 1700 352" /></svg>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 class="sr-only">Matrero · Indumentaria de trabajo</h1>
+          <div class="emblem-wrap" id="emblem">
+            <div class="emblem-glow" aria-hidden="true"></div>
+            <div class="emblem">
+              <img src="/logo.jpg" alt="Logo de Matrero, indumentaria de trabajo" width="1024" height="1024" />
+              <div class="emblem-shine" aria-hidden="true"></div>
+            </div>
+          </div>
+          <p class="hero-claim">Ropa que aguanta <em>la jornada entera.</em></p>
+          <p class="lead">Para el campo, el taller y la obra. Prendas resistentes, cómodas y hechas para durar, temporada tras temporada.</p>
+          <div class="hero-actions">
+            <a href="#catalogo" class="btn btn-primary">Ver catálogo <span aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" id="heroWa" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#catalogo" class="seal" aria-label="Ir al catálogo">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="sealPath" d="M100 100m-74 0a74 74 0 1 1 148 0a74 74 0 1 1-148 0" /></defs>
+          <circle cx="100" cy="100" r="96" />
+          <text><textPath href="#sealPath" textLength="462">MATRERO · INDUMENTARIA DE TRABAJO · HECHA PARA DURAR · </textPath></text>
+        </svg>
+        <span>M</span>
+      </a>
+
+      <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Campo</span><b>M</b><span>Taller</span><b>M</b><span>Obra</span><b>M</b><span>Sol, viento y helada</span><b>M</b><span>Costuras reforzadas</span><b>M</b><span>Hecha para durar</span><b>M</b><span>Campo</span><b>M</b><span>Taller</span><b>M</b><span>Obra</span><b>M</b><span>Sol, viento y helada</span><b>M</b><span>Costuras reforzadas</span><b>M</b><span>Hecha para durar</span><b>M</b></div></div>
+    </section>
+
+    <section class="values" aria-label="Lo que nos define">
+      <div><i data-value="shield"></i><strong>Resistente</strong><span>Telas y costuras reforzadas</span></div>
+      <div><i data-value="boot"></i><strong>Cómoda</strong><span>Libertad de movimiento</span></div>
+      <div><i data-value="gear"></i><strong>Funcional</strong><span>Bolsillos donde hacen falta</span></div>
+      <div><i data-value="wind"></i><strong>Para todo clima</strong><span>Sol, viento y helada</span></div>
+      <div><i data-value="needle"></i><strong>Hecha para durar</strong><span>Calidad que se nota</span></div>
+    </section>
+
+    <section class="catalog" id="catalogo">
+      <div class="section-head">
+        <p class="eyebrow">Catálogo</p>
+        <h2>Nuestras prendas</h2>
+        <p class="section-sub">Elegí la prenda, el talle y consultanos por WhatsApp. Te respondemos con stock y envío.</p>
+      </div>
+      <div class="filters" id="filters" role="tablist"></div>
+      <div class="grid" id="grid"><p class="muted center">Cargando prendas…</p></div>
+    </section>
+
+    <section class="about" id="nosotros">
+      <div class="about-copy reveal">
+        <p class="eyebrow">Nosotros</p>
+        <h2>Del campo,<br /><em>para el que trabaja.</em></h2>
+        <p>Matrero nace del trabajo de todos los días. Sabemos lo que es arrancar antes que salga el sol y terminar con la ropa curtida, por eso elegimos prendas que estén a la altura.</p>
+        <p>Cada producto que vendemos lo elegimos pensando en quien lo va a usar: que resista, que sea cómodo y que dure.</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="contact-inner reveal">
+        <p class="eyebrow">Contacto</p>
+        <h2>¿Buscás algo en particular?</h2>
+        <p class="lead">Escribinos y te asesoramos con talles, stock y envíos.</p>
+        <div class="contact-cards">
+          <a class="contact-card wa" id="contactWa" target="_blank" rel="noopener">
+            <span class="ico" data-icon="wa"></span>
+            <span><small>WhatsApp</small>+54 3537 301558</span>
+            <i aria-hidden="true">→</i>
+          </a>
+          <a class="contact-card" id="contactIg" target="_blank" rel="noopener">
+            <span class="ico" data-icon="ig"></span>
+            <span><small>Instagram</small>@matrero.jp</span>
+            <i aria-hidden="true">→</i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="/logo.jpg" alt="" width="64" height="64" loading="lazy" />
+      <div><strong>Matrero</strong><span>Indumentaria de trabajo</span></div>
+    </div>
+    <nav class="footer-nav" aria-label="Pie de página">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#nosotros">Nosotros</a>
+      <a id="footWa" target="_blank" rel="noopener">WhatsApp</a>
+      <a id="footIg" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <p class="footer-copy">© <span id="year"></span> Matrero · Hecha para durar <a href="/admin" class="footer-admin">Administrar</a></p>
+  </footer>
+
+  <a class="fab-wa" id="fabWa" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"></a>
+
+  <dialog class="drawer" id="cart" aria-labelledby="cartTitle">
+    <div class="drawer-inner">
+      <header class="drawer-head">
+        <h2 id="cartTitle">Tu pedido</h2>
+        <button class="modal-close" id="cartClose" aria-label="Cerrar carrito">×</button>
+      </header>
+      <div class="drawer-body" id="cartItems"></div>
+      <footer class="drawer-foot" id="cartFoot">
+        <div class="cart-total"><span>Total</span><strong id="cartTotal"></strong></div>
+        <p class="cart-note muted" id="cartTotalNote" hidden>Algunas prendas son a consultar: te confirmamos el precio por mensaje.</p>
+        <label class="cart-field"><span>Tu nombre (opcional)</span><input id="cartName" autocomplete="name" maxlength="80" /></label>
+        <label class="cart-field"><span>Nota o localidad para el envío (opcional)</span><textarea id="cartNote" rows="2" maxlength="400"></textarea></label>
+        <button class="btn btn-primary btn-block" id="sendWa"><span class="ico" data-icon="wa"></span> Enviar pedido por WhatsApp</button>
+        <button class="btn btn-ghost btn-block" id="sendIg"><span class="ico" data-icon="ig"></span> Enviar pedido por Instagram</button>
+        <p class="cart-help muted">Por Instagram copiamos el pedido: solo pegalo en el chat que se abre.</p>
+        <button class="link cart-clear" id="cartClear">Vaciar carrito</button>
+      </footer>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <dialog class="modal" id="modal">
+    <div class="modal-inner" id="modalBody"></div>
+  </dialog>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
